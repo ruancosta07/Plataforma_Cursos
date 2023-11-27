@@ -9,23 +9,18 @@
 }
 
 
-@font-face {
-    font-family: 'DM Serif Display';
-    src: url('https://ruancosta07.github.io/assets/fonts/DM_Serif/DMSerifDisplay-Regular.ttf') format('ttf');
-    font-display: swap;
-    font-weight: 700 !important;
-}
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
 @font-face {
     font-family: 'Poppins';
-    src: url('https://ruancosta07.github.io/assets/fonts/Poppins/Poppins-Medium.ttf') format('ttf');
+    src: url('/assets/fonts/Poppins/Poppins-Medium.ttf') format('ttf');
     font-display: swap;
     font-weight: 500;
 }
 
 @font-face {
     font-family: 'Inter';
-    src: url('https://ruancosta07.github.io/assets/fonts/Inter/Inter-Medium.ttf') format('ttf');
+    src: url('/assets/fonts/Inter/Inter-Medium.ttf') format('ttf');
     font-display: swap;
     font-weight: 600;
 }
@@ -152,13 +147,14 @@ header {
     color: rgb(219, 219, 219);
     background-color: rgb(61, 61, 61);
 }
-.opcoes span + span{
+
+.opcoes span+span {
     transition: .15s;
     padding: 4px 8px;
     border-radius: 4px;
 }
 
-.opcoes span + span:hover{
+.opcoes span+span:hover {
     background-color: rgb(61, 61, 61);
     color: rgb(219, 219, 219);
 }
