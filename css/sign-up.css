@@ -1,0 +1,55 @@
+input:not(input[type^="checkbox"]) {
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, .15);
+    width: 100%;
+    padding: 6px 8px;
+    border-radius: 4px;
+    outline: none;
+    font-family: 'Inter';
+    font-weight: 500;
+    transition: .15s;
+}
+
+.pesquisa{
+    font-family: 'Poppins' !important;
+    font-weight: 400;
+}
+
+input:not([type="checkbox"]):focus {
+    box-shadow: 0 0 3px 2px #824DCB !important;
+}
+
+label {
+    display: block;
+}
+
+label.font-semibold {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.conteudo div+div {
+    margin-top: 12px;
+}
+
+
+
+#container-login{
+    grid-template-columns: 1fr 1fr;
+}
+
+.campo-checkbox{
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+[data-elemento]{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: .6s;
+}
+
+.anima-elemento {
+    opacity: 1;
+    transform: translateY(0);
+    transition: .6s;
+}

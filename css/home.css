@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container-width {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@font-face {
+    font-family: DM Serif Display;
+    src: url(/assets/fonts/DM_Serif/DMSerifDisplay-Regular.ttf);
+    font-display: swap;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(/assets/fonts/Poppins/Poppins-Medium.ttf);
+    font-display: swap;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(/assets/fonts/Inter/Inter-Medium.ttf);
+    font-display: swap;
+    font-weight: 500;
+}
+
+header nav span {
+    font-family: Poppins;
+}
+
+h1,
+.logo {
+    font-family: 'DM Serif Display';
+}
+
+a {
+    font-family: Poppins;
+}
+
+p {
+    font-family: Inter;
+}
+
+.titulo {
+    font-family: Poppins;
+}
+
+.shadow-template {
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, .25);
+}
+
+.barra-de-pesquisa {
+    font-family: 'poppins';
+    font-size: .9rem;
+}
+
+[data-cursos-accordion] {
+    transform: translateY(-50px);
+    transition: .3s;
+    opacity: 0;
+    display: none;
+}
+
+.anima-cursos {
+    transform: translateY(0px);
+    opacity: 1;
+    display: flex;
+}
+
+#ativa-cursos i {
+    transition: .3s !important;
+}
+
+@media(max-width: 1024px) {
+    .container-width {
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+    }
+}
+
+header {
+    position: sticky;
+    top: 0;
+}
+
+.menu-hamburguer {
+    width: 35px;
+    height: 14px;
+    position: relative;
+}
+
+.menu-hamburguer::before,
+.menu-hamburguer::after {
+    content: '';
+    display: block;
+    width: 100%;
+    background-color: #222222 !important;
+    height: .25rem;
+    border-radius: 4px;
+    position: absolute;
+    transition: .3s;
+}
+
+.menu-hamburguer::after {
+    top: 100%;
+}
+
+#menu-mobile:checked~label .menu-hamburguer::before {
+    transform: rotate(225deg);
+    top: 50%;
+}
+
+#menu-mobile:checked~label .menu-hamburguer::after {
+    transform: rotate(-225deg);
+    top: 50%;
+}
+
+.invert {
+    filter: invert(1);
+}
+
+.video-play {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.time-display {
+    position: absolute;
+    top: -30px;
+    background-color: #242424;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: 'Poppins';
+    font-size: .9rem;
+    display: none;
+}
+
+
+.config .opcoes {
+    font-family: Poppins;
+}
+
+.opcoes-ativo {
+    color: rgb(219, 219, 219);
+    background-color: rgb(61, 61, 61);
+}
+.opcoes span + span{
+    transition: .15s;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.opcoes span + span:hover{
+    background-color: rgb(61, 61, 61);
+    color: rgb(219, 219, 219);
+}
+
+.localizacao {
+    font-family: Poppins;
+}
+
+/* .controls {
+    background: linear-gradient(#0000, #000000bf);
+    bottom: 0;
+    left: 0;
+    padding: 5px;
+    padding-top: 10px;
+    position: absolute;
+    right: 0;
+} */
