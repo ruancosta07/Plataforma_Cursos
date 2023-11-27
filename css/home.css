@@ -11,21 +11,21 @@
 
 @font-face {
     font-family: 'DM Serif Display';
-    src: url(/assets/fonts/DM_Serif/DMSerifDisplay-Regular.ttf) format('ttf');
+    src: url('/assets/fonts/DM_Serif/DMSerifDisplay-Regular.ttf') format('ttf');
     font-display: swap;
     font-weight: 700 !important;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url(/assets/fonts/Poppins/Poppins-Medium.ttf) format('ttf');
+    src: url('/assets/fonts/Poppins/Poppins-Medium.ttf') format('ttf');
     font-display: swap;
     font-weight: 500;
 }
 
 @font-face {
     font-family: 'Inter';
-    src: url(/assets/fonts/Inter/Inter-Medium.ttf) format('ttf');
+    src: url('/assets/fonts/Inter/Inter-Medium.ttf') format('ttf');
     font-display: swap;
     font-weight: 600;
 }
