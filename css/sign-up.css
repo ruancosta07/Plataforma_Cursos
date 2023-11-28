@@ -9,7 +9,7 @@ input:not(input[type^="checkbox"]) {
     transition: .15s;
 }
 
-.pesquisa{
+.pesquisa {
     font-family: 'Poppins' !important;
     font-weight: 400;
 }
@@ -27,22 +27,20 @@ label.font-semibold {
     margin-bottom: 4px;
 }
 
-.conteudo div+div {
+.conteudo div+div:not(.campo-checkbox) {
     margin-top: 12px;
 }
 
-
-
-#container-login{
+#container-login {
     grid-template-columns: 1fr 1fr;
 }
 
-.campo-checkbox{
+.campo-checkbox {
     display: grid;
     grid-template-columns: auto 1fr;
 }
 
-[data-elemento]{
+[data-elemento] {
     opacity: 0;
     transform: translateY(50px);
     transition: .6s;
@@ -52,4 +50,11 @@ label.font-semibold {
     opacity: 1;
     transform: translateY(0);
     transition: .6s;
+}
+
+@media (max-width:1440px) {
+    form.container-width {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
 }
