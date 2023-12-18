@@ -32,7 +32,7 @@ export default function criarConta() {
     let c5 = false
 
     function verificaCampoVazio(input, campo, aviso) {
-        if (input.value == '') {
+        if (input && input.value == '') {
             campo.appendChild(aviso)
         }
     }
@@ -128,44 +128,47 @@ export default function criarConta() {
         let caracteres = document.getElementById('caracteres')
         let maiuscula = document.getElementById('maiuscula')
         let numeros = document.getElementById('numeros')
-        caracteres.classList.remove('hidden')
-        maiuscula.classList.remove('hidden')
-        numeros.classList.remove('hidden')
-        senhaValue = senhaValue.replace(/[ ]/g, '')
-        senha.value = senhaValue
+        if (caracteres && maiuscula && numeros && senha && senhaValue) {
+            caracteres.classList.remove('hidden')
+            maiuscula.classList.remove('hidden')
+            numeros.classList.remove('hidden')
+            senhaValue = senhaValue.replace(/[ ]/g, '')
+            senha.value = senhaValue
 
-        if (senhaValue.length >= 8) {
-            caracteres.classList.replace('text-red-600', 'text-green-600')
-            caracteres.querySelector('i').classList.replace('ri-close-circle-line', 'ri-checkbox-circle-line')
-            c3 = true
-        }
-        else {
-            caracteres.classList.replace('text-green-600', 'text-red-600')
-            caracteres.querySelector('i').classList.replace('ri-checkbox-circle-line', 'ri-close-circle-line')
-            c3 = false
-        }
-        if (regexMaiuscula.test(senhaValue) == true) {
-            maiuscula.classList.replace('text-red-600', 'text-green-600')
-            maiuscula.querySelector('i').classList.replace('ri-close-circle-line', 'ri-checkbox-circle-line')
-            c3 = true
-        }
-        else {
-            maiuscula.classList.replace('text-green-600', 'text-red-600')
-            maiuscula.querySelector('i').classList.replace('ri-checkbox-circle-line', 'ri-close-circle-line')
-            c3 = false
-        }
 
-        if (regexNumeros.test(senhaValue) == true) {
-            numeros.classList.replace('text-red-600', 'text-green-600')
-            numeros.querySelector('i').classList.replace('ri-close-circle-line', 'ri-checkbox-circle-line')
-            c3 = true
-        }
-        else {
-            numeros.classList.replace('text-green-600', 'text-red-600')
-            numeros.querySelector('i').classList.replace('ri-checkbox-circle-line', 'ri-close-circle-line')
-            c3 = false
-        }
+            if (senhaValue.length >= 8) {
+                caracteres.classList.replace('text-red-600', 'text-green-600')
+                caracteres.querySelector('i').classList.replace('ri-close-circle-line', 'ri-checkbox-circle-line')
+                c3 = true
+            }
+            else {
+                caracteres.classList.replace('text-green-600', 'text-red-600')
+                caracteres.querySelector('i').classList.replace('ri-checkbox-circle-line', 'ri-close-circle-line')
+                c3 = false
+            }
+            if (regexMaiuscula.test(senhaValue) == true) {
+                maiuscula.classList.replace('text-red-600', 'text-green-600')
+                maiuscula.querySelector('i').classList.replace('ri-close-circle-line', 'ri-checkbox-circle-line')
+                c3 = true
+            }
+            else {
+                maiuscula.classList.replace('text-green-600', 'text-red-600')
+                maiuscula.querySelector('i').classList.replace('ri-checkbox-circle-line', 'ri-close-circle-line')
+                c3 = false
+            }
 
+            if (regexNumeros.test(senhaValue) == true) {
+                numeros.classList.replace('text-red-600', 'text-green-600')
+                numeros.querySelector('i').classList.replace('ri-close-circle-line', 'ri-checkbox-circle-line')
+                c3 = true
+            }
+            else {
+                numeros.classList.replace('text-green-600', 'text-red-600')
+                numeros.querySelector('i').classList.replace('ri-checkbox-circle-line', 'ri-close-circle-line')
+                c3 = false
+            }
+
+        }
     }
 
     function verificaSenhasIguais() {
@@ -189,10 +192,10 @@ export default function criarConta() {
     }
 
     function verificaTermos() {
-        if (termos.checked == true) {
+        if (termos && termos.checked == true) {
             c5 = true
         }
-        else {
+        else if(termos && termos.checked == false) {
             document.querySelector('.campo-checkbox').appendChild(avisoCheck)
             c5 = false
         }
@@ -207,7 +210,8 @@ export default function criarConta() {
         verificaTermos()
         if (c1 === true && c2 === true && c3 === true && c4 === true && c5 === true) {
             document.querySelector('#submit').innerText = 'CRIANDO CONTA...'
-            localStorage.setItem('token', [email.value, senha.value])
+            localStorage.setItem('email', email.value)
+            localStorage.setItem('senha', senha.value)
             setTimeout(() => {
                 document.querySelector('#submit').innerText = 'CONTA CRIADA!'
                 setTimeout(() => {
