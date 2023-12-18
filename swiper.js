@@ -1,5 +1,4 @@
-window.addEventListener('DOMContentLoaded', () => {
-
+ function initSwiper() {
     const swiperTecnologias = new Swiper('.swiper1', {
         speed: 1000,
         loop: true,
@@ -24,20 +23,23 @@ window.addEventListener('DOMContentLoaded', () => {
         allowTouchMove: false
     }
     )
-
     const swiperMaisPopulares = new Swiper('.swiper2', {
         speed: 400,
-        grabCursor: true,
+        grabCursor: false,
         breakpoints: {
-            1024: {
-                slidesPerView: 4,
-                spaceBetween: 25
-            },
             100: {
                 slidesPerView: 1,
                 centeredSlides: true,
                 spaceBetween: 25
-            }
+            },
+            760:{
+                slidesPerView: 2,
+                spaceBetween: 25
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 25
+            },
         },
 
         navigation: {
@@ -49,17 +51,21 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const swiperFrontEnd = new Swiper('.swiper3', {
         speed: 400,
-        grabCursor: true,
+        grabCursor: false,
         breakpoints: {
-            1024: {
-                slidesPerView: 4,
-                spaceBetween: 25
-            },
             100: {
                 slidesPerView: 1,
                 centeredSlides: true,
                 spaceBetween: 25
-            }
+            },
+            760:{
+                slidesPerView: 2,
+                spaceBetween: 25
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 25
+            },
         },
 
         navigation: {
@@ -71,15 +77,19 @@ window.addEventListener('DOMContentLoaded', () => {
     const swiperBackEnd = new Swiper('.swiper4', {
         speed: 400,
         breakpoints: {
-            1024: {
-                slidesPerView: 4,
-                spaceBetween: 25
-            },
             100: {
                 slidesPerView: 1,
                 centeredSlides: true,
                 spaceBetween: 25
-            }
+            },
+            760:{
+                slidesPerView: 2,
+                spaceBetween: 25
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 25
+            },
         },
 
         navigation: {
@@ -88,4 +98,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
     )
-})
+}
+
+initSwiper()
