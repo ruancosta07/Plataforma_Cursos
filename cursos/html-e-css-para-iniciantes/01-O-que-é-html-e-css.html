@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos - cursos de ti grátis</title>
+    <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon">
+    <link rel="preload" href="/remixicon/fonts/remixicon.css" as="style">
+    <link rel="stylesheet" href="/remixicon/fonts/remixicon.css">
+    <link rel="preload" href="/css/output.css" as="style">
+    <link rel="stylesheet" href="/css/output.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="preload" href="/css/animacao.css" as="style">
+    <link rel="stylesheet" href="/css/animacao.css">
+    <link rel="stylesheet" href="/css/cursos.css">
+    <script type="module" src="/script.js"></script>
+</head>
+
+<body class="bg-gray-2">
+    <header class="py-2 mb-8 lg:mb-16 bg-gray-1 shadow  shadow-gray-8 z-[3]">
+        <div class="container-width py-2 flex items-center justify-between lg:py-5">
+            <a href="/index.html" class="logo text-[2.5rem] leading-[0] text-gray-13 max-lg:order-2">CodeHub</a>
+
+            <nav class="max-lg:hidden ml-auto mr-8">
+                <ul id="ul-main" class="flex gap-5 text-[1.1rem] items-center text-gray-13">
+                    <li class=" relative">
+                        <a href="#" id="ativa-cursos" class=" flex items-center cursor-pointer">Cursos <i
+                                class="ri-arrow-drop-down-fill"></i>
+                        </a>
+                        <ul id="cursos-accordion" data-cursos-accordion=""
+                            class=" hidden flex-col gap-5 absolute w-[260px] py-4 px-5 left-0 justify-center bottom-[-120px] bg-gray-4  h-fit rounded text-gray-13 text-[.9rem]">
+                            <li><a href="/cursos/html-e-css-para-iniciantes/01-O-que-é-html-e-css.html">HTML e CSS para
+                                    iniciantes</a>
+                            </li>
+                            <li><a href="/index#back-end">JavaScript do básico ao avançado</a></li>
+                            <li><a href="">Vue.js 3 completo</a></li>
+                        </ul>
+
+                    </li>
+                    <li id="contato"><a href="">Fórum</a></li>
+                    <li class="login"><a href="/login.html" class="tracking-[.15px]">Entrar</a></li>
+                    <li class="create"><a href="/criar-conta.html"
+                            class="bg-gradient-to-b from-purple-8 to-purple-10 inline-block text-gray-1 py-2 px-4 rounded tracking-[.15px]">Criar
+                            conta</a>
+                    </li>
+                </ul>
+            </nav>
+            <input type="checkbox" name="" id="menu-mobile" class="hidden">
+            <label for="menu-mobile" class="lg:hidden max-lg:mt-1 max-lg:order-3">
+                <div class="menu-hamburguer"></div>
+            </label>
+            <div class="troca-modo text-[1.4rem] max-lg:mt-[6px] right-8  max-lg:mr-4 max-lg:order-1">
+                <input type="checkbox" name="" id="claro" class="hidden">
+                <input type="checkbox" name="" id="escuro" class="hidden">
+                <label for="claro" id="label-claro" class="cursor-pointer">
+                    <i class="ri-sun-line"></i>
+                </label>
+                <label for="escuro" class="hidden cursor-pointer" id="label-escuro">
+                    <i class="ri-moon-line text-gray-1"></i>
+                </label>
+            </div>
+        </div>
+    </header>
+    <nav id="nav-mobile" class="lg:hidden fixed -top-28 right-0 bg-gray-1 w-full py-3 z-0">
+        <ul class="text-gray-13 container-width text-[1.2rem] grid gap-2">
+            <li class=" relative">
+                <a href="#" id="ativa-cursos2" class="flex items-center cursor-pointer">Cursos <i
+                        class="ri-arrow-drop-down-fill"></i>
+                </a>
+                <ul id="cursos-accordion2" data-cursos-accordion=""
+                    class=" hidden flex-col gap-5 absolute w-[260px] py-4 px-5 left-0 justify-center bottom-[-120px] bg-gray-4  h-fit rounded text-gray-13 text-[.9rem]">
+                    <li><a href="cursos/html-e-css-para-iniciantes/aula-1.html">HTML e CSS para iniciantes</a>
+                    </li>
+                    <li><a href="#back-end">JavaScript do básico ao avançado</a></li>
+                    <li><a href="">Vue.js 3 completo</a></li>
+                </ul>
+
+            </li>
+            <li id="contato"><a href="">Fórum</a></li>
+            <li class="login"><a href="login.html" class="tracking-[.15px]">Entrar</a></li>
+            <li class="create"><a href="criar-conta.html"
+                    class=" bg-gradient-to-b from-purple-8 to-purple-10 inline-block text-gray-1 py-1 px-2 rounded tracking-[.15px]">Criar
+                    conta</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="mb-16 lg:mb-32">
+        <h1 class="titulo container-width text-gray-13 text-[1.8rem] lg:text-[2.5rem] mb-3 leading-[1.125] lg:leading-[0.815] tracking-[0px] max-w-[30ch]"
+            data-elemento="">
+            01 - O que é o HTML e o CSS</h1>
+        <div class="container-width max-lg mb-8 localizacao text-gray-10" data-elemento="">
+            <a href="/index.html">Início</a>
+            <span>></span>
+            <a href="">Front End</a>
+            <span>></span>
+            <a href="">HTML e CSS para iniciantes</a>
+        </div>
+        <div class="relative container-width max-lg:h-[200px] lg:h-[600px]" data-elemento="">
+            <iframe
+                src="https://www.youtube.com/embed/gs7FAhv_1J4?si=wn6BryQiCPd_8GF-autoplay=1&modestbranding=1&color=white&rel=0"
+                frameborder="0" allowfullscreen class="w-full h-full"></iframe>
+            <div class="flex justify-between mt-2 relative" data-container-btn="">
+                <a href="01-O-que-é-html-e-css.html"
+                    class="anterior text-gray-5 bg-gray-13 cursor-pointer px-4 py-2 inline-block rounded text-[.9rem] lg:text-[1.1rem]"><i
+                        class="ri-arrow-left-s-fill"></i> Anterior</a>
+                <a href="02-Títulos-e-parágrafos.html"
+                    class="proxima text-gray-5 bg-gray-13  px-4 py-2 inline-block rounded text-[.9rem] lg:text-[1.1rem]">
+                    Próxima <i class="ri-arrow-right-s-fill"></i></a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-13">
+        <div class="container-width max-lg:py-4 grid lg:grid-cols-3 py-8">
+            <!-- <a href="#" class="max-lg:mb-8 logo text-gray-1 text-[3rem] leading-none">Cursos</a> -->
+            <div class="contato max-lg:mb-8">
+                <h1 class="text-gray-1 text-[2rem] l1.5:text-[3rem] leading-none mb-3 lg:mb-5">Contato</h1>
+                <div class="links text-gray-5 text-[.85rem] flex flex-col">
+                    <a href="">+91 0000-0000</a>
+                    <a href="">contato@cursos.com</a>
+                </div>
+            </div>
+            <div class="categorias max-lg:mb-8">
+                <nav class="links">
+                    <h1 class="text-gray-1 text-[1.5rem] lg:text-[3rem] leading-none mb-3 lg:mb-5">Categorias</h1>
+                    <ul class="text-gray-5 text-[.85rem]">
+                        <li><a href="">Desenvolvimento Front End</a></li>
+                        <li><a href="">Desenvolvimento Back End</a></li>
+                        <li><a href="">Desenvolvimento Full Stack</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="links-uteis">
+                <nav class="links">
+                    <h1 class="text-gray-1 text-[1.5rem] lg:text-[3rem] leading-none mb-3 lg:mb-5">Links úteis</h1>
+                    <ul class="text-gray-5 text-[.85rem]">
+                        <li><a href="">início</a></li>
+                        <li><a href="">Termos e condições</a></li>
+                        <li><a href="">FAQ's</a></li>
+                        <li><a href="">Nosso blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
